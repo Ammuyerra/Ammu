@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For You ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background: #ffe6eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Letter Box */
+.letter {
+    background: white;
+    padding: 40px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: left;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    color: #ff4d6d;
+}
+
+/* Typing text */
+#text {
+    font-size: 18px;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+/* Button */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="letter">
+    <h1>My Love 💌</h1>
+    <p id="text"></p>
+    <button onclick="startLetter()">Read Letter ❤️</button>
+</div>
+
+<script>
+let message = `Happy Birthday my Man ❤️
+
+From the day you came into my life,
+everything became more beautiful 💕
+
+You are my happiness,
+my strength,
+and my biggest blessing ✨
+
+I may not say it every day,
+but I love you more than anything 💖
+
+I promise to stand by you always,
+no matter what 💫
+
+Once again,
+Happy Birthday Nanna 🎂❤️`;
+
+
+let i = 0;
+
+function startLetter() {
+    let textArea = document.getElementById("text");
+    textArea.innerHTML = "";
+    i = 0;
+
+    let interval = setInterval(() => {
+        textArea.innerHTML += message.charAt(i);
+        i++;
+        if (i > message.length) clearInterval(interval);
+    }, 40);
+}
+</script>
+
+</body>
+</html>
